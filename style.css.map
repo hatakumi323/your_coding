@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "style.scss",
+        "css/_base.scss",
+        "css/_header.scss",
+        "css/_front-page.scss",
+        "css/_config.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
