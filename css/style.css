@@ -191,6 +191,72 @@
   font-size: 14px;
 }
 
+.blog {
+  background-color: #EEFBFB;
+  padding: 64px 20px 128px;
+}
+
+.blog-inner {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-ttl {
+  margin-top: 40px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.blog-ttl span {
+  font-size: 16px;
+  color: #3BA6C9;
+  display: block;
+  margin-top: 20px;
+}
+
+.blog ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: -ms-box;
+  display: -webkit-flexbox;
+  display: -moz-flexbox;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog ul li {
+  width: calc(33.33333333% - 24px * 2 / 3);
+  background: #fff;
+  list-style: none;
+  margin-bottom: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.blog ul li div {
+  padding: 20px;
+}
+
+.blog ul li img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.blog ul li p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
 .header {
   position: fixed;
   top: 0;
