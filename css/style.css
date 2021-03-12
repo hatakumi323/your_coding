@@ -193,7 +193,7 @@
 
 .blog {
   background-color: #EEFBFB;
-  padding: 64px 20px 128px;
+  padding: 64px 20px 100px;
 }
 
 .blog-inner {
@@ -217,7 +217,7 @@
   margin-top: 20px;
 }
 
-.blog ul {
+.blog-list {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -233,28 +233,104 @@
   justify-content: space-between;
 }
 
-.blog ul li {
+.blog-item {
   width: calc(33.33333333% - 24px * 2 / 3);
   background: #fff;
-  list-style: none;
   margin-bottom: 0;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
-.blog ul li div {
-  padding: 20px;
-}
-
-.blog ul li img {
+.blog img {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.blog ul li p {
-  font-size: 18px;
+.blog .card-body {
+  -webkit-box-flex: 1;
+  font-size: 1.125em;
   font-weight: bold;
   line-height: 1.4;
+  padding: 15px 30px 15px 15px;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+}
+
+.blog .card-time {
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  padding: 0 30px 10px 30px;
+}
+
+.works {
+  padding: 64px 20px 90px;
+}
+
+.works-ttl {
+  margin-top: 40px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.works-ttl span {
+  font-size: 16px;
+  color: #3BA6C9;
+  display: block;
+  margin-top: 20px;
+}
+
+.works .swiper-inner {
+  max-width: 350px;
+}
+
+.works-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: -ms-box;
+  display: -webkit-flexbox;
+  display: -moz-flexbox;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.works-slide {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+}
+
+.works-slide img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.works-slide-body {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 15px 17px 34px;
+}
+
+.works-slide-list {
+  padding: 0 113px 34px 17px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.works-slide-item {
+  padding: 0 113px 34px 17px;
+  font-weight: bold;
+  text-align: left;
 }
 
 .header {

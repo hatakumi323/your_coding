@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./path/swiper.min.css">
     <link rel="stylesheet" href="./reset/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>ユアコーディング</title>
@@ -126,58 +127,132 @@
         <h2 class="qa-ttl">よくある質問<span>FQA</span></h2>
         <div class="qa-inner">
             <dl class="qa_items">
-				<div class="qa__item accordion">
-					<dt class="accordion__head">デザインから一貫してお願いすることは可能でしょうか<span class="accordion__icon"></span></dt>
-					<dd class="accordion__body">
-						<div class="accordion__body-in">ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。<br>
+                <div class="qa__item accordion">
+                    <dt class="accordion__head">デザインから一貫してお願いすることは可能でしょうか<span class="accordion__icon"></span></dt>
+                    <dd class="accordion__body">
+                        <div class="accordion__body-in">ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。<br>
                             ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。</div><!-- /.accordion__body-in -->
-					</dd>
-				</div><!-- /.qa__item -->
-				<div class="qa__item accordion">
-					<dt class="accordion__head">WordPressのカスタマイズをお願いすることも可能でしょうか？<span class="accordion__icon"></span></dt>
-					<dd class="accordion__body">
-						<div class="accordion__body-in">可能です。ただECサイトなどの場合は構築難易度や工数の関係で綿密にヒアリングさせていただきたく思います。</div><!-- /.accordion__body-in -->
-					</dd>
-				</div><!-- /.qa__item -->
-				<div class="qa__item accordion">
-					<dt class="accordion__head">コーディングのスピード感が知りたい<span class="accordion__icon"></span></dt>
-					<dd class="accordion__body">
-						<div class="accordion__body-in">HTMLレスポンシブ込み5ページで1週間、10ページで2週間、WordPressサイト5ページで2週間、10ページで3週間が目安に<br>
+                    </dd>
+                </div><!-- /.qa__item -->
+                <div class="qa__item accordion">
+                    <dt class="accordion__head">WordPressのカスタマイズをお願いすることも可能でしょうか？<span class="accordion__icon"></span>
+                    </dt>
+                    <dd class="accordion__body">
+                        <div class="accordion__body-in">可能です。ただECサイトなどの場合は構築難易度や工数の関係で綿密にヒアリングさせていただきたく思います。</div>
+                        <!-- /.accordion__body-in -->
+                    </dd>
+                </div><!-- /.qa__item -->
+                <div class="qa__item accordion">
+                    <dt class="accordion__head">コーディングのスピード感が知りたい<span class="accordion__icon"></span></dt>
+                    <dd class="accordion__body">
+                        <div class="accordion__body-in">
+                            HTMLレスポンシブ込み5ページで1週間、10ページで2週間、WordPressサイト5ページで2週間、10ページで3週間が目安に<br>
                             なります。</div><!-- /.accordion__body-in -->
-					</dd>
-				</div><!-- /.qa__item -->
-			</dl><!-- /.qa_items -->
+                    </dd>
+                </div><!-- /.qa__item -->
+            </dl><!-- /.qa_items -->
         </div>
     </section>
 
     <section class="blog">
         <h2 class="blog-ttl">ブログ<span>BLOG</span></h2>
         <div class="blog-inner">
-            <ul>
-                <li>
-                <a href="飛ばしたいURL"><img src="./img/austin-distel-wawEfYdpkag-unsplash.png" alt="画像説明"></a>
-                <div>
-                    <p>サイトをリニューアルオープンしました。</p>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <figure href="飛ばしたいURL"><img src="./img/austin-distel-wawEfYdpkag-unsplash.png" alt="画像説明"></figure>
+                    <div class="card-body">サイトをリニューアルオープンしました。</div>
+                    <div class="card-time"><span>202001.23</span></div>
+
                 </div>
-                </li>
-                <li>
-                <a href="飛ばしたいURL"><img src="./img/dylan-gillis-KdeqA3aTnBY-unsplash.png" alt="画像説明"></a>
-                <div>
-                    <p>WebサイトでSEO内部施策に適したコー<br>
+                <div class="blog-item">
+                    <figure href="飛ばしたいURL"><img src="./img/dylan-gillis-KdeqA3aTnBY-unsplash.png" alt="画像説明"></figure>
+
+                    <div class="card-body">WebサイトでSEO内部施策に適したコー<br>
                         ディングでどれぐらいサイトが早くなるの<br>
-                        か検証してみました</p>
+                        か検証してみました</div>
+                    <div class="card-time"><span>202001.23</span></div>
+
                 </div>
-                </li>
-                <li>
-                <a href="飛ばしたいURL"><img src="./img/brooke-cagle-g1Kr4Ozfoac-unsplash.png" alt="画像説明"></a>
-                <div>
-                    <p>ユアコーディングではデザイナーの方を<br>
-                        広く募集しています。</p>
+                <div class="blog-item">
+                    <figure href="飛ばしたいURL"><img src="./img/brooke-cagle-g1Kr4Ozfoac-unsplash.png" alt="画像説明"></figure>
+                    <div class="card-body">ユアコーディングではデザイナーの方を<br>
+                        広く募集しています。</div>
+                    <div class="card-time"><span>202001.23</span></div>
                 </div>
-                </li>
-                </ul>
+            </div>
         </div>
     </section>
+
+    <section class="works">
+        <h2 class="works-ttl">制作実績<span>WORKS</span></h2>
+        <div class="swiper-inner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure href="飛ばしたいURL"><img src="./img/arnel-hasanovic-MNd-Rka1o0Q-unsplash.png" alt="画像説明">
+                    </figure>
+                    <div class="swiper-body">コーディングカンファレンスのイベント<br>
+                        LPの制作を行いました！</div>
+                    <ul class="swiper-list">
+                        <li class="swiper-item">採用技術：:jQuery,WordPress</li>
+                        <li class="swiper-item">実装期間：4週間</li>
+                        <li class="swiper-item">担当コーダー：石井</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <figure href="飛ばしたいURL"><img src="./img/digital-marketing-1.png" alt="画像説明"></figure>
+                    <div class="swiper-body">WebサイトでSEO内部施策に適したコー<br>
+                        ディングでどれぐらいサイトが早くなるの<br>
+                        か検証してみました</div>
+                    <ul class="swiper-list">
+                        <li class="swiper-item">採用技術：:jQuery,Bootstrap4</li>
+                        <li class="swiper-item">実装期間：2週間</li>
+                        <li class="swiper-item">担当コーダー：石井</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <figure href="飛ばしたいURL"><img src="./img/digital-marketing-2.png" alt="画像説明"></figure>
+                    <div class="swiper-body">ユアコーディングではデザイナーの方を<br>
+                        広く募集しています。</div>
+                    <ul class="swiper-list">
+                        <li class="swiper-item">採用技術：:jQuery,Bootstrap4</li>
+                        <li class="swiper-item">実装期間：2週間</li>
+                        <li class="swiper-item">担当コーダー：石井</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <figure href="飛ばしたいURL"><img src="./img/digital-marketing-1433427_1280.png" alt="画像説明"></figure>
+                    <div class="swiper-body">ユアコーディングではデザイナーの方を<br>
+                        広く募集しています。</div>
+                    <ul class="swiper-list">
+                        <li class="swiper-item">採用技術：:jQuery,Bootstrap4</li>
+                        <li class="swiper-item">実装期間：2週間</li>
+                        <li class="swiper-item">担当コーダー：石井</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <figure href="飛ばしたいURL"><img src="./img/hal-gatewood-tZc3vjPCk-Q-unsplash.png" alt="画像説明"></figure>
+                    <div class="swiper-body">ユアコーディングではデザイナーの方を<br>
+                        広く募集しています。</div>
+                    <ul class="swiper-list">
+                        <li class="swiper-item">採用技術：:jQuery,Bootstrap4</li>
+                        <li class="swiper-item">実装期間：6週間</li>
+                        <li class="swiper-item">担当コーダー：石井</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ページネーションの div 要素 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- ナビゲーションボタンの div 要素-->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- スクロールバーの div 要素 -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
