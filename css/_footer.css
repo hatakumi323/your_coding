@@ -1,0 +1,33 @@
+.footer {
+  background-color: #F8F8F8;
+  text-align: center;
+}
+
+.footer-inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-ttl {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 50px 0 30px;
+}
+
+.footer-list {
+  padding-bottom: 60px;
+}
+
+.footer-item {
+  padding-right: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.footer-item:first-child {
+  margin-left: 70px;
+}
+
+.footer .copy {
+  padding-bottom: 50px;
+}
