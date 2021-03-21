@@ -1,3 +1,23 @@
+// レイアウト幅
+$layout-width-canvas: 1280px;
+$layout-width-inner: 1200px;
+
+// ブレークポイント
+$breakpoints: (
+	"sp-down": "(max-width: 767px)",
+	"sp-up": "(min-width: 768px)",
+	"tab-down": "(max-width: #{$layout-width-inner - 1px})",
+	"tab-up": "(min-width: #{$layout-width-inner})",
+	"retina": "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)",
+);
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -6,6 +26,16 @@
     height: 94px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
     background: #fff;
+
+    @include mq('sp-down') {
+        width: 100%;
+        height: auto;
+    }
+
+    @include mq('sp-up') {
+        width: 100%;
+        height: auto;
+    }
     &-inner {
         max-width: 1024px;
         margin-right: auto;
@@ -43,5 +73,10 @@
                 color: #333;
             }
         }
+
+        @include mq('sp-down') {
+            display: none;
+        }
     }
 }
+

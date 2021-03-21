@@ -1,6 +1,19 @@
-let mySwiper = new Swiper('.swiper-wrapper',{
-    loop: true,
-    speed: 800,
-    slidesPerView: 1.5,
-    centeredSlides : true
-  });
+// results
+new Swiper( '.swiper-container', {
+  speed: 400,
+  spaceBetween: 40,
+  width: 400,
+  loop: true,
+  loopedSlides: 6,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 24,
+      width: 274,
+    }
+  }
+});

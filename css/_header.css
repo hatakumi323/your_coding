@@ -8,6 +8,20 @@
   background: #fff;
 }
 
+@media (max-width: 767px) {
+  .header {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .header-inner {
   max-width: 1024px;
   margin-right: auto;
@@ -49,4 +63,10 @@
 
 .header-nav li a {
   color: #333;
+}
+
+@media (max-width: 767px) {
+  .header-nav {
+    display: none;
+  }
 }
