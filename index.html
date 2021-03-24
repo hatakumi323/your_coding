@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./path/swiper.min.css">
     <link rel="stylesheet" href="./reset/reset.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <!-- <header class="header" style="max-width: 100%; height: auto;">
         <div class="header-inner">
             <div class="header-logo">
                 <a href=""><img src="./img/logo.png" alt="ユアコーディング"></a>
@@ -30,7 +30,28 @@
                 <a href="" class="contact-btn">お問い合わせ</a>
             </div>
         </div>
-    </header>
+    </header> -->
+
+    <header id="js-header" class="header">
+        <h1 class="header-ttl">Sample Corp.</h1>
+        <nav class="header-nav">
+          <button id="js-toggle" class="header-burger" aria-label="menu">
+            <span class="header-burgerInline"></span>
+            <span class="header-burgerInline"></span>
+            <span class="header-burgerInline"></span>
+          </button>
+          <ul class="header-navList">
+            <li class="header-navItem"><a href="#news" class="header-navLink js-navLink">News</a></li>
+            <li class="header-navItem"><a href="#service" class="header-navLink js-navLink">Service</a></li>
+            <li class="header-navItem"><a href="#results" class="header-navLink js-navLink">Results</a></li>
+            <li class="header-navItem"><a href="#price" class="header-navLink js-navLink">Price</a></li>
+            <li class="header-navItem"><a href="#comments" class="header-navLink js-navLink">Comments</a></li>
+            <li class="header-navItem"><a href="#faq" class="header-navLink js-navLink">FAQs</a></li>
+            <li class="header-navItem"><a href="#contact" class="header-navLink js-navLink">Contact</a></li>
+          </ul>
+        </nav>
+        <div id="js-overlay" class="header-overlay"></div>
+      </header>
 
     <div class="drawer__icon">
         <div class="drawer__icon__bars">
@@ -198,86 +219,18 @@
         <div class="results-container swiper-container swiper-container-initialized swiper-container-horizontal">
           <ul class="results-list swiper-wrapper"
             style="transform: translate3d(-3960px, 0px, 0px); transition-duration: 0ms;">
-            <li class="results-item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0"
-              style="width: 400px; margin-right: 40px;">
-              <a href="#" class="results-itemLink">
-                <figure class="results-itemFig">
-                  <img src="./img/arnel-hasanovic-MNd-Rka1o0Q-unsplash.png" alt="">
-                </figure>
-                <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
-                </div>
-              </a>
-            </li>
-            <li class="results-item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1"
-              style="width: 400px; margin-right: 40px;">
-              <a href="#" class="results-itemLink">
-                <figure class="results-itemFig">
-                  <img src="./img/digital-marketing-1.png" alt="">
-                </figure>
-                <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
-                </div>
-              </a>
-            </li>
-            <li class="results-item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-              data-swiper-slide-index="2" style="width: 400px; margin-right: 40px;">
-              <a href="#" class="results-itemLink">
-                <figure class="results-itemFig">
-                  <img src="./img/digital-marketing-1433427_1280.png" alt="">
-                </figure>
-                <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
-                </div>
-              </a>
-            </li>
-            <li class="results-item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-              data-swiper-slide-index="3" style="width: 400px; margin-right: 40px;">
-              <a href="#" class="results-itemLink">
-                <figure class="results-itemFig">
-                  <img src="./img/digital-marketing-2.png" alt="">
-                </figure>
-                <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
-                </div>
-              </a>
-            </li>
-            <li class="results-item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
-              data-swiper-slide-index="4" style="width: 400px; margin-right: 40px;">
-              <a href="#" class="results-itemLink">
-                <figure class="results-itemFig">
-                  <img src="./img/hal-gatewood-tZc3vjPCk-Q-unsplash.png" alt="">
-                </figure>
-                <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
-                </div>
-              </a>
-            </li>
-            <li class="results-item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="5"
-              style="width: 400px; margin-right: 40px;">
-              <a href="#" class="results-itemLink">
-                <figure class="results-itemFig">
-                  <img src="./img/arnel-hasanovic-MNd-Rka1o0Q-unsplash.png" alt="">
-                </figure>
-                <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
-                </div>
-              </a>
-            </li>
             <li class="results-item swiper-slide" data-swiper-slide-index="0" style="width: 400px; margin-right: 40px;">
               <a href="#" class="results-itemLink">
                 <figure class="results-itemFig">
                   <img src="./img/hal-gatewood-tZc3vjPCk-Q-unsplash.png" alt="">
                 </figure>
                 <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                  <h3 class="results-itemTtl">株式会社サンプル様採用サイトのコーデ<br>
+                    ィングを行いました！</h3>
+                  <p class="results-itemTxt">
+                    採用技術：jQuery,Bootstrap4<br>
+                    実装期間：2週間<br>
+                    担当コーダー：石井</p>
                 </div>
               </a>
             </li>
@@ -287,8 +240,12 @@
                   <img src="./img/arnel-hasanovic-MNd-Rka1o0Q-unsplash.png" alt="">
                 </figure>
                 <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                  <h3 class="results-itemTtl">株式会社サンプル様採用サイトのコーデ<br>
+                    ィングを行いました！</h3>
+                  <p class="results-itemTxt">
+                    採用技術：jQuery,Bootstrap4<br>
+                    実装期間：2週間<br>
+                    担当コーダー：石井</p>
                 </div>
               </a>
             </li>
@@ -299,8 +256,12 @@
                   <img src="./img/digital-marketing-1.png" alt="">
                 </figure>
                 <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                  <h3 class="results-itemTtl">株式会社サンプル様採用サイトのコーデ<br>
+                    ィングを行いました！</h3>
+                  <p class="results-itemTxt">
+                    採用技術：jQuery,Bootstrap4<br>
+                    実装期間：2週間<br>
+                    担当コーダー：石井</p>
                 </div>
               </a>
             </li>
@@ -311,8 +272,12 @@
                   <img src="./img/digital-marketing-1433427_1280.png" alt="">
                 </figure>
                 <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                  <h3 class="results-itemTtl">株式会社サンプル様採用サイトのコーデ<br>
+                    ィングを行いました！</h3>
+                  <p class="results-itemTxt">
+                    採用技術：jQuery,Bootstrap4<br>
+                    実装期間：2週間<br>
+                    担当コーダー：石井</p>
                 </div>
               </a>
             </li>
@@ -323,8 +288,12 @@
                   <img src="./img/digital-marketing-2.png" alt="">
                 </figure>
                 <div class="results-itemLinkInner">
-                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
-                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                  <h3 class="results-itemTtl">コーディングカンファレンスのイベント<br>
+                    LPの制作を行いました！</h3>
+                  <p class="results-itemTxt">
+                    採用技術：jQuery,Bootstrap4<br>
+                    実装期間：2週間<br>
+                    担当コーダー：石井</p>
                 </div>
               </a>
             </li>
@@ -341,9 +310,6 @@
             aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
             aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"
             aria-label="Go to slide 6"></span></div>
-        <div class="util-linkBox">
-          <a href="#" class="util-link mod-light">VIEW ALL</a>
-        </div>
       </section>
 
     <section class="contact">

@@ -4,7 +4,11 @@ new Swiper( '.swiper-container', {
   spaceBetween: 40,
   width: 400,
   loop: true,
+  // autoplay: {
+  //   delay: 2000,
+  // },
   loopedSlides: 6,
+  slidesPerView: 1.5,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',

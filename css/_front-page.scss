@@ -1,6 +1,6 @@
 // フォント
 $font-family-default: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Droid Sans", sans-serif;
-$font-family-english: "Montserrat", sans-serif;
+$font-family-english: 'Noto Sans JP', sans-serif;
 
 // レイアウト幅
 $layout-width-canvas: 1280px;
@@ -36,53 +36,6 @@ body {
       }
   }
   
-  .util-linkBox {
-      @include mq('sp-down') {
-          text-align: center;
-      }
-  }
-  
-  .util-link {
-    border: solid 1px #3e3e3e;
-    color: #3e3e3e;
-    display: block;
-    font-family: $font-family-english;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    padding: .8em 0;
-    position: relative;
-    text-align: center;
-    -webkit-transition: background-color .2s, color .2s;
-    transition: background-color .2s, color .2s;
-  
-    &.mod-light {
-      border-color: #fff;
-      color: #fff;
-      }
-  
-      @include mq('sp-up') {
-          &.mod-light:hover {
-        background: #fff;
-        color: #3e3e3e;
-      }
-  
-      &:hover {
-        background: #3e3e3e;
-        color: #fff;
-      }
-      }
-  
-      @include mq('sp-down') {
-          font-size: 1.8rem;
-          margin: 0 auto;
-          max-width: 268px;
-          padding-top: 13px;
-          padding-bottom: 13px;
-      }
-  }
-  
-
 
 .main {
     background-image: url(../img/circle.png);
@@ -147,21 +100,53 @@ body {
         font-size: 28px;
         font-weight: bold;
         margin-bottom: 64px;
+
+        @include mq('sp-down') {
+            margin-top: 32px;
+        }
     }
     &-box {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 93px;
+
+        @include mq('sp-down') {
+            display: block;
+            margin-bottom: 40px;
+            margin: 0 auto;
+
+            figure {
+                img {
+                    width: 100%;
+                    height: auto;
+                    padding: 8px;
+                }
+            }
+        }
         h3 {
             font-size: 24px;
             line-height: 1.8;
             font-weight: bold;
             margin-bottom: 54px;
+            padding: 4px;
+
+            @include mq('sp-down') {
+                margin-bottom: 32px;
+                font-size: 1.8rem;
+                text-align: center;
+            }
         }
         p {
             line-height: 1.5;
             font-weight: bold;
+            padding: 4px;
+
+            @include mq('sp-down') {
+                margin-bottom: 22px;
+                font-size: 1.2rem;
+                text-align: center;
+            }
         }
     }
 }
@@ -192,10 +177,15 @@ body {
         box-shadow: 0 3px 6px rgba(0,0,0,0.16);
         background-color: #fff;
         border-collapse: collapse;
+
+        @include mq('sp-down') {
+            display: block;
+            width: auto;
+        }
+
         th {
             width: 30%;
             padding: 30px;
-            min-width: 300px;
             border: 1px solid #f0ededed;
         }
         td {
@@ -304,12 +294,21 @@ body {
             -ms-flex-wrap:wrap;
             flex-wrap:wrap;
             justify-content: space-between;
+
+            @include mq('sp-down') {
+                display: block;
+            }
         }
         &-item {
             width: calc(33.33333333% - 24px * 2 / 3);
             background: #fff;
             margin-bottom: 0;
             box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+
+            @include mq('sp-down') {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
         }
          img {
             width:100%;
@@ -340,8 +339,8 @@ body {
           padding: 40px 0 40px 16px;
       
           @include mq('sp-up') {
-              margin: 0 0 0 auto;
-              padding: 58px 0 60px 60px;
+              margin: 0 0 0 0;
+              padding: 58px 0 60px;
           }
       
           @include mq('sp-down') {
@@ -364,29 +363,6 @@ body {
                   padding-right: 16px;
               }
         }
-      
-        .util-linkBox {
-              margin: 40px 16px 0 0;
-      
-              @include mq('sp-up') {
-                  margin: 42px 0 0 0;
-              }
-      
-              @include mq('sp-down') {
-                  margin: 24px 16px 0 0;
-              }
-          }
-      
-          .util-link {
-              @include mq('sp-up') {
-                  max-width: 290px;
-              }
-      
-              @include mq('sp-down') {
-                  width: 316px;
-                  max-width: 100%;
-              }
-          }
       }
       
       .results-container {
@@ -402,7 +378,7 @@ body {
       
           @include mq('sp-up') {
               margin: 44px 0 0 -5px;
-              text-align: left;
+              text-align: center;
           }
       
           @include mq('sp-down') {
@@ -439,7 +415,8 @@ body {
       .results-itemLink {
         background: #fff;
         color: #3e3e3e;
-          display: block;
+        display: block;
+        border-radius: 3px;
       
           @include mq('sp-up') {
               transition: opacity .2s;
@@ -465,8 +442,9 @@ body {
       }
       
       .results-itemTtl {
-        font-size: 20px;
+        font-size: .75rem;
         font-weight: 700;
+        line-height: 1.8;
       
           @include mq('sp-down') {
               font-size: 1.4rem;
@@ -474,9 +452,10 @@ body {
       }
       
       .results-itemTxt {
-        font-size: 16px;
+        font-size: .5rem;
         line-height: 1.5;
-        margin-top: 6px;
+        margin-top: 22px;
+        font-weight: bold;
       
           @include mq('sp-down') {
               font-size: 1.2rem;
@@ -488,6 +467,10 @@ body {
     .contact {
         background-image:linear-gradient(to right, #05A5FA, #63FBD7);
         padding: 44px 230px 70px;
+        
+        @include mq('sp-down') {
+            padding: 20px;
+        }
         &-inner {
             max-width: 900px;
         }
@@ -520,6 +503,10 @@ body {
         .form-list {
             text-align: left;
             padding: 39px 63px 0px;
+
+            @include mq('sp-down') {
+                display: block;
+            }
         }
         
         .form-item {
@@ -558,6 +545,10 @@ body {
             padding: 0;
             line-height: 43px;
             width: 500px;
+
+            @include mq('sp-down') {
+                width: 100%;
+            }
         }
         
         textarea {

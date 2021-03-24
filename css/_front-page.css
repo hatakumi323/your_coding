@@ -15,53 +15,6 @@ body {
   }
 }
 
-@media (max-width: 767px) {
-  .util-linkBox {
-    text-align: center;
-  }
-}
-
-.util-link {
-  border: solid 1px #3e3e3e;
-  color: #3e3e3e;
-  display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  padding: .8em 0;
-  position: relative;
-  text-align: center;
-  -webkit-transition: background-color .2s, color .2s;
-  transition: background-color .2s, color .2s;
-}
-
-.util-link.mod-light {
-  border-color: #fff;
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  .util-link.mod-light:hover {
-    background: #fff;
-    color: #3e3e3e;
-  }
-  .util-link:hover {
-    background: #3e3e3e;
-    color: #fff;
-  }
-}
-
-@media (max-width: 767px) {
-  .util-link {
-    font-size: 1.8rem;
-    margin: 0 auto;
-    max-width: 268px;
-    padding-top: 13px;
-    padding-bottom: 13px;
-  }
-}
-
 .main {
   background-image: url(../img/circle.png);
   background-position: top -100px right -120px;
@@ -130,6 +83,12 @@ body {
   margin-bottom: 64px;
 }
 
+@media (max-width: 767px) {
+  .feature-heading {
+    margin-top: 32px;
+  }
+}
+
 .feature-box {
   display: flex;
   justify-content: space-between;
@@ -137,16 +96,47 @@ body {
   margin-bottom: 93px;
 }
 
+@media (max-width: 767px) {
+  .feature-box {
+    display: block;
+    margin-bottom: 40px;
+    margin: 0 auto;
+  }
+  .feature-box figure img {
+    width: 100%;
+    height: auto;
+    padding: 8px;
+  }
+}
+
 .feature-box h3 {
   font-size: 24px;
   line-height: 1.8;
   font-weight: bold;
   margin-bottom: 54px;
+  padding: 4px;
+}
+
+@media (max-width: 767px) {
+  .feature-box h3 {
+    margin-bottom: 32px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
 }
 
 .feature-box p {
   line-height: 1.5;
   font-weight: bold;
+  padding: 4px;
+}
+
+@media (max-width: 767px) {
+  .feature-box p {
+    margin-bottom: 22px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
 
 .price {
@@ -182,10 +172,16 @@ body {
   border-collapse: collapse;
 }
 
+@media (max-width: 767px) {
+  .price table {
+    display: block;
+    width: auto;
+  }
+}
+
 .price table th {
   width: 30%;
   padding: 30px;
-  min-width: 300px;
   border: 1px solid #f0ededed;
 }
 
@@ -304,11 +300,24 @@ body {
   justify-content: space-between;
 }
 
+@media (max-width: 767px) {
+  .blog-list {
+    display: block;
+  }
+}
+
 .blog-item {
   width: calc(33.33333333% - 24px * 2 / 3);
   background: #fff;
   margin-bottom: 0;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 767px) {
+  .blog-item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 .blog img {
@@ -343,8 +352,8 @@ body {
 
 @media (min-width: 768px) {
   .results {
-    margin: 0 0 0 auto;
-    padding: 58px 0 60px 60px;
+    margin: 0 0 0 0;
+    padding: 58px 0 60px;
   }
 }
 
@@ -374,35 +383,6 @@ body {
   }
 }
 
-.results .util-linkBox {
-  margin: 40px 16px 0 0;
-}
-
-@media (min-width: 768px) {
-  .results .util-linkBox {
-    margin: 42px 0 0 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .results .util-linkBox {
-    margin: 24px 16px 0 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .results .util-link {
-    max-width: 290px;
-  }
-}
-
-@media (max-width: 767px) {
-  .results .util-link {
-    width: 316px;
-    max-width: 100%;
-  }
-}
-
 .results-container {
   margin-top: 36px;
 }
@@ -420,7 +400,7 @@ body {
 @media (min-width: 768px) {
   .results-pagination {
     margin: 44px 0 0 -5px;
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -460,6 +440,7 @@ body {
   background: #fff;
   color: #3e3e3e;
   display: block;
+  border-radius: 3px;
 }
 
 @media (min-width: 768px) {
@@ -486,8 +467,9 @@ body {
 }
 
 .results-itemTtl {
-  font-size: 20px;
+  font-size: .75rem;
   font-weight: 700;
+  line-height: 1.8;
 }
 
 @media (max-width: 767px) {
@@ -497,9 +479,10 @@ body {
 }
 
 .results-itemTxt {
-  font-size: 16px;
+  font-size: .5rem;
   line-height: 1.5;
-  margin-top: 6px;
+  margin-top: 22px;
+  font-weight: bold;
 }
 
 @media (max-width: 767px) {
@@ -511,6 +494,12 @@ body {
 .contact {
   background-image: linear-gradient(to right, #05A5FA, #63FBD7);
   padding: 44px 230px 70px;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding: 20px;
+  }
 }
 
 .contact-inner {
@@ -552,6 +541,12 @@ body {
   padding: 39px 63px 0px;
 }
 
+@media (max-width: 767px) {
+  .contact .form-list {
+    display: block;
+  }
+}
+
 .contact .form-item {
   margin-bottom: 25px;
 }
@@ -589,6 +584,12 @@ body {
   padding: 0;
   line-height: 43px;
   width: 500px;
+}
+
+@media (max-width: 767px) {
+  .contact .input-text {
+    width: 100%;
+  }
 }
 
 .contact textarea {
