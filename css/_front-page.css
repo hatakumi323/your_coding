@@ -55,6 +55,12 @@ body {
   z-index: 1000;
 }
 
+@media (max-width: 767px) {
+  .main-img {
+    width: 100%;
+  }
+}
+
 .feature-ttl {
   margin-top: 40px;
   font-size: 32px;
@@ -240,6 +246,10 @@ body {
   background: #F2F2F2;
   border: 1px solid #e5e5e5;
   font-weight: 700;
+}
+
+.qa .accordion__body:nth-of-type(n+1) {
+  display: none;
 }
 
 .qa .accordion__body-in {
@@ -493,7 +503,13 @@ body {
 
 .contact {
   background-image: linear-gradient(to right, #05A5FA, #63FBD7);
-  padding: 44px 230px 70px;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding: 0 4%;
+    padding-bottom: 70px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -502,12 +518,8 @@ body {
   }
 }
 
-.contact-inner {
-  max-width: 900px;
-}
-
 .contact-ttl {
-  margin-top: 40px;
+  padding-top: 40px;
   font-size: 32px;
   text-align: center;
   font-weight: bold;
@@ -534,6 +546,8 @@ body {
 .contact .form-inner {
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .contact .form-list {
@@ -542,6 +556,12 @@ body {
 }
 
 @media (max-width: 767px) {
+  .contact .form-list {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
   .contact .form-list {
     display: block;
   }
@@ -587,6 +607,12 @@ body {
 }
 
 @media (max-width: 767px) {
+  .contact .input-text {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
   .contact .input-text {
     width: 100%;
   }

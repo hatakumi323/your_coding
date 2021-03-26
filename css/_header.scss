@@ -176,275 +176,75 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
 
 .header {
-    background: rgba(255, 255, 255, 0.1);
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-      z-index: 1000;
-  
-      .add-scrolled & {
-          background: rgba(255, 255, 255, 0.6);
-      }
-  
-      @include mq('sp-up') {
-          height: 80px;
-          text-align: center;
-          transition: .2s;
-          z-index: 1000;
-      }
-  
-      @include mq('sp-down') {
-          background: rgba(255, 255, 255, 0.6);
-      height: 68px;
-      }
-  }
-  
-  .header-ttl {
-  
-      @include mq('sp-up') {
-          display: none;
-      }
-  
-      @include mq('sp-down') {
-          margin: 20px 0 0 16px;
-          transition: opacity 0.3s;
-          font-size: 23px;
-          font-weight: 700;
-          font-family: $font-family-english;
-      }
-  
-      .add-active & {
-          @include mq('sp-down') {
-              opacity: 0;
-          }
-      }
-  }
-  
-  .header-burger {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 0;
-  
-      @include mq('sp-down') {
-          display: block;
-      height: 26px;
-      left: -40px;
-      position: absolute;
-      top: 20px;
-      transition: right 0.3s linear;
-      width: 26px;
-      }
-  }
-  
-  .header-burgerInline {
-      @include mq('sp-down') {
-          background-color: #3e3e3e;
-          border-radius: 4px;
-          display: block;
-          height: 4px;
-          left: 0;
-          position: absolute;
-          transition: 0.3s;
-          width: 26px;
-          z-index: 1;
-  
-          &:nth-child(1) {
-              top: 2px;
-          }
-  
-          &:nth-child(2) {
-              top: 10px;
-          }
-  
-          &:nth-child(3) {
-              top: 18px;
-          }
-      }
-  
-      @include mq('sp-down') {
-          .add-active & {
-              background-color: #fff;
-  
-              &:nth-child(1) {
-                  top: 10px;
-                  transform: rotate(-45deg);
-              }
-  
-              &:nth-child(2) {
-                  left: 100%;
-                  opacity: 0;
-              }
-  
-              &:nth-child(3) {
-                  top: 10px;
-                  transform: rotate(45deg);
-              }
-          }
-      }
-  }
-  
-  .header-overlay {
-    background: rgba(0, 0, 0, 0.7);
-    bottom: 0;
-    opacity: 0;
     position: fixed;
     top: 0;
-    transition: .3s;
-    visibility: hidden;
-      width: 100%;
-  
-      .add-active & {
-          opacity: 1;
-          visibility: visible;
-      }
-  }
-  
-  .header-nav {
-    align-items: center;
-    display: flex;
-      justify-content: center;
-  
-      @include mq('sp-up') {
-          height: 100%;
-      }
-  
+    z-index: 9999;
+    width: 100%;
+    height: 94px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    background: #fff;
+
+    @include mq('sp-down') {
+        width: 100%;
+        height: auto;
+    }
+
+    @include mq('sp-up') {
+        width: 100%;
+        height: auto;
+    }
+    &-inner {
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        
+        @include mq('sp-up') {
+          justify-content: space-between;
+        }
+    }
+    &-logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 55px;
+            height: 55px;
+        }
+    }
+    &-ttl {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 16px;
+    }
+    &-nav {
+        ul {
+            display: flex;
+            margin-left: 20px;
+            justify-content: space-between;
+        }
+        li {
+            text-align: center;
+            margin-right: 45px;
+            font-weight: bold;
+            a {
+                color: #333;
+            }
+        }
+
+        @include mq('sp-down') {
+            display: none;
+        }
+    }
+
+    &-btn {
+
       @include mq('sp-down') {
-          background: #fff;
-      bottom: 0;
-      position: fixed;
-      right: -300px;
-      text-align: center;
-      top: 0;
-      transition: right 0.3s linear;
-      width: 300px;
-      z-index: 1;
-      }
-  
-      @include mq('sp-down') {
-          .add-active & {
-              right: 0;
-          }
-      }
-  }
-  
-  .header-navList {
-  
-      @include mq('sp-up') {
-          display: flex;
-      }
-  }
-  
-  .header-navItem {
-      + .header-navItem {
-          @include mq('sp-up') {
-              margin-left: 40px;
-          }
-  
-          @include mq('sp-down') {
-              margin-top: 20px;
-          }
-      }
-  }
-  
-  .header-navLink {
-    color: #3e3e3e;
-    font-family: $font-family-english;
-    font-size: 1.6rem;
-    font-weight: 500;
-    letter-spacing: -.025em;
-      position: relative;
-  
-      @include mq('sp-up') {
-          padding: 0.5em 0;
-  
-          &:after {
-              background: #3e3e3e;
-              bottom: 0;
-              content: '';
-              height: 1px;
-              left: 0;
-              position: absolute;
-              transform: scaleX(0);
-              transition: transform .2s;
-              width: 100%;
-          }
-  
-          &:hover:after {
-              transform: scaleX(1);
-          }
-      }
-  
-      @include mq('sp-down') {
-          font-size: 1.8rem;
-      }
-  }
-  
-
-// .header {
-//     position: fixed;
-//     top: 0;
-//     z-index: 9999;
-//     width: 100%;
-//     height: 94px;
-//     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-//     background: #fff;
-
-//     @include mq('sp-down') {
-//         width: 100%;
-//         height: auto;
-//     }
-
-//     @include mq('sp-up') {
-//         width: 100%;
-//         height: auto;
-//     }
-//     &-inner {
-//         max-width: 100%;
-//         margin-right: auto;
-//         margin-left: auto;
-//         padding: 0 20px;
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         height: 100%;
-//     }
-//     &-logo {
-//         display: flex;
-//         align-items: center;
-//         img {
-//             width: 55px;
-//             height: 55px;
-//         }
-//     }
-//     &-ttl {
-//         font-size: 24px;
-//         font-weight: bold;
-//         margin-left: 16px;
-//     }
-//     &-nav {
-//         ul {
-//             display: flex;
-//             justify-content: space-between;
-//             margin-left: 20px;
-//         }
-//         li {
-//             text-align: center;
-//             margin-right: 45px;
-//             font-weight: bold;
-//             a {
-//                 color: #333;
-//             }
-//         }
-
-//         @include mq('sp-down') {
-//             display: none;
-//         }
-//     }
-// }
+        display: none;
+    }
+    }
+}
 

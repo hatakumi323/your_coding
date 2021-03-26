@@ -21,3 +21,10 @@ new Swiper( '.swiper-container', {
     }
   }
 });
+
+$(function(){
+  
+  $('.accordion__head').click(function(){
+    $(this).next().slideToggle();
+  });
+});
