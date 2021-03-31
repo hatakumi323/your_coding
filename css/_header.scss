@@ -178,7 +178,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .header {
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 3;
     width: 100%;
     height: 94px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
@@ -201,9 +201,90 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         display: flex;
         align-items: center;
         height: 100%;
+        position: relative;
         
         @include mq('sp-up') {
           justify-content: space-between;
+
+        }
+        @include mq('sp-down') {
+          .drawer {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0 20px;
+              position: absolute;
+              right: 0;
+              top: 18px;
+          }
+          .navbar_toggle{
+            z-index:9999;
+           }
+           
+           .navbar_toggle_icon {
+            position: relative;
+            display: block;
+            height: 2px;
+            width: 30px;
+            background: #5c6b80;
+            -webkit-transition: ease .5s;
+            transition: ease .5s;
+           }
+           
+           .navbar_toggle_icon:nth-child(1) {
+            top: 0;
+           }
+           
+           .navbar_toggle_icon:nth-child(2) {
+            margin: 8px 0;
+           }
+           
+           .navbar_toggle_icon:nth-child(3) {
+            top: 0;
+           }
+           /*OPEN時の動き*/
+           .navbar_toggle.open .navbar_toggle_icon:nth-child(1) {
+            top: 10px;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+           }
+           
+           .navbar_toggle.open .navbar_toggle_icon:nth-child(2) {
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            opacity: 0;
+           }
+           
+           .navbar_toggle.open .navbar_toggle_icon:nth-child(3) {
+            top: -10px;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+           }
+        
+           .menu{
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-transition:ease .5s;
+            transition:ease .5s;
+            z-index:1000;
+           }
+           
+           .menu ul li{
+            padding: 2em;
+            border-bottom: 1px solid #CCC;
+           }
+           /*OPEN時の動き*/
+           .menu.open {
+            -webkit-transform:translateX(0);
+            transform:translateX(0);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+           }
+        }
+
+        .menu {
+          display: none;
         }
     }
     &-logo {
@@ -211,14 +292,25 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         align-items: center;
 
         img {
-            width: 55px;
-            height: 55px;
+          
+          width: 55px;
+          height: 55px;
+          
         }
     }
     &-ttl {
-        font-size: 24px;
-        font-weight: bold;
-        margin-left: 16px;
+      
+      @include mq('sp-up') {
+          font-size: 24px;
+          font-weight: bold;
+          margin-left: 16px;
+        }
+
+      @include mq('sp-down') {
+          font-size: 1rem;
+          font-weight: bold;
+          margin-left: 16px;
+        }
     }
     &-nav {
         ul {
